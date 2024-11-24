@@ -1,0 +1,31 @@
+version: "3.1"
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: ecommerce
+      POSTGRES_PASSWORD: "root"
+      POSTGRES_DB: ecommerce
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./PG/PostgreSQL:/var/lib/postgresql/data
+    networks:
+      - postgresql-network
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "root@admin.com"
+      PGADMIN_DEFAULT_PASSWORD: "root"
+    ports:
+      - "16543:80"
+    depends_on:
+      - postgres
+    networks:
+      - postgresql-network
+
+networks:
+  postgresql-network:
+    driver: bridge

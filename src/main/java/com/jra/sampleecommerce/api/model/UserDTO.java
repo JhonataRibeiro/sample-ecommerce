@@ -1,0 +1,251 @@
+package com.jra.sampleecommerce.api.model;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.annotation.Generated;
+import org.springframework.hateoas.RepresentationModel;
+
+import java.io.Serializable;
+import java.util.Objects;
+
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
+public class UserDTO extends RepresentationModel<UserDTO> implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    @JsonProperty("id")
+    private String id;
+
+    @JsonProperty("username")
+    private String username;
+
+    @JsonProperty("firstName")
+    private String firstName;
+
+    @JsonProperty("lastName")
+    private String lastName;
+
+    @JsonProperty("email")
+    private String email;
+
+    @JsonProperty("password")
+    private String password;
+
+    @JsonProperty("phone")
+    private String phone;
+
+    @JsonProperty("userStatus")
+    private String userStatus;
+
+    public UserDTO id(String id) {
+        this.id = id;
+        return this;
+    }
+
+    /**
+     * Get id
+     *
+     * @return id
+     */
+
+    @Schema(name = "id", required = false)
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public UserDTO username(String username) {
+        this.username = username;
+        return this;
+    }
+
+    /**
+     * Get username
+     *
+     * @return username
+     */
+
+    @Schema(name = "username", required = false)
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public UserDTO firstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
+
+    /**
+     * Get firstName
+     *
+     * @return firstName
+     */
+
+    @Schema(name = "firstName", required = false)
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public UserDTO lastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+
+    /**
+     * Get lastName
+     *
+     * @return lastName
+     */
+
+    @Schema(name = "lastName", required = false)
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public UserDTO email(String email) {
+        this.email = email;
+        return this;
+    }
+
+    /**
+     * Get email
+     *
+     * @return email
+     */
+
+    @Schema(name = "email", required = false)
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public UserDTO password(String password) {
+        this.password = password;
+        return this;
+    }
+
+    /**
+     * Get password
+     *
+     * @return password
+     */
+
+    @Schema(name = "password", required = false)
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public UserDTO phone(String phone) {
+        this.phone = phone;
+        return this;
+    }
+
+    /**
+     * Get phone
+     *
+     * @return phone
+     */
+
+    @Schema(name = "phone", required = false)
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public UserDTO userStatus(String userStatus) {
+        this.userStatus = userStatus;
+        return this;
+    }
+
+    /**
+     * Get userStatus
+     *
+     * @return userStatus
+     */
+
+    @Schema(name = "userStatus", required = false)
+    public String getUserStatus() {
+        return userStatus;
+    }
+
+    public void setUserStatus(String userStatus) {
+        this.userStatus = userStatus;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        UserDTO userDTO = (UserDTO) o;
+        return Objects.equals(this.id, userDTO.id) &&
+                Objects.equals(this.username, userDTO.username) &&
+                Objects.equals(this.firstName, userDTO.firstName) &&
+                Objects.equals(this.lastName, userDTO.lastName) &&
+                Objects.equals(this.email, userDTO.email) &&
+                Objects.equals(this.password, userDTO.password) &&
+                Objects.equals(this.phone, userDTO.phone) &&
+                Objects.equals(this.userStatus, userDTO.userStatus);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, username, firstName, lastName, email, password, phone, userStatus);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class UserDTO {\n");
+        sb.append("    id: ").append(toIndentedString(id)).append("\n");
+        sb.append("    username: ").append(toIndentedString(username)).append("\n");
+        sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
+        sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
+        sb.append("    email: ").append(toIndentedString(email)).append("\n");
+        sb.append("    password: ").append(toIndentedString(password)).append("\n");
+        sb.append("    phone: ").append(toIndentedString(phone)).append("\n");
+        sb.append("    userStatus: ").append(toIndentedString(userStatus)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
+}
+
